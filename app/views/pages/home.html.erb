@@ -1,5 +1,13 @@
 <h1>Is this working?</h1>
 
-  <%= button_to "Employee with one department" %>
-  <%= button_to "Employee with two departments" %>
-  <%= button_to "Employee with no departments" %>
+  <%= link_to "Employee with one department" %>
+  <%= link_to "Employee with two departments" %>
+  <%= link_to "Employee with no departments" %>
+
+  <%= link_to "Company", create_company_path, method: :post %>
+
+  <p><% @companies.each do |company|%>
+
+    <li> <%= company.company_name %> <li>
+
+  <% end %></p>

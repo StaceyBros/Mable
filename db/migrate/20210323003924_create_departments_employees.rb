@@ -1,8 +1,8 @@
 class CreateDepartmentsEmployees < ActiveRecord::Migration[5.2]
   def change
     create_table :departments_employees do |t|
-      t.references :departments
-      t.references :employees
+      t.integer :department_id
+      t.integer :employee_id
     end
   end
 end

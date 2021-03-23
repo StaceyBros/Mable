@@ -28,10 +28,8 @@ ActiveRecord::Schema.define(version: 2021_03_23_003924) do
   end
 
   create_table "departments_employees", force: :cascade do |t|
-    t.bigint "departments_id"
-    t.bigint "employees_id"
-    t.index ["departments_id"], name: "index_departments_employees_on_departments_id"
-    t.index ["employees_id"], name: "index_departments_employees_on_employees_id"
+    t.integer "department_id"
+    t.integer "employee_id"
   end
 
   create_table "employees", force: :cascade do |t|
